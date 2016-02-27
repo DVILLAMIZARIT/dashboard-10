@@ -4,12 +4,19 @@
   "description": "A dashboard project with react",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha **/*.spec.js --compilers js:babel-register"
   },
   "keywords": [
     "react",
-    "dashboard"
+    "dashboard",
+    "es2015"
   ],
   "author": "thomas.eberl",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.5.1",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-register": "^6.5.2",
+    "mocha": "^2.4.5"
+  }
 }
