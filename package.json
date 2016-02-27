@@ -1,0 +1,15 @@
+{
+  "name": "dashboard",
+  "version": "0.0.1",
+  "description": "A dashboard project with react",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "dashboard"
+  ],
+  "author": "thomas.eberl",
+  "license": "MIT"
+}
