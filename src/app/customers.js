@@ -12,6 +12,11 @@ class Customers {
     }
   }
 
+  load() {
+    this.loadCustomers();
+    return this.list;
+  }
+
   get list() {
     return this.customerList;
   }
