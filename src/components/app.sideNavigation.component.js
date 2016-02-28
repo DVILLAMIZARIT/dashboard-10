@@ -11,8 +11,9 @@ class SideNavigationComponent extends React.Component {
   }
 
   render() {
-    const navItems = ['Overview', 'Reports', 'Analytics', 'Export'];
+    const navItems = this.props.navItemList;
     const selectedNavItem = this.props.selectedNavItem;
+
     return (
       <div className="col-sm-3 col-md-2 sidebar">
 
@@ -47,9 +48,11 @@ class SideNavigationComponent extends React.Component {
 export default SideNavigationComponent;
 // propTypes and defaultProps are defined as properties on the constructor
 SideNavigationComponent.propTypes = {
+  navItemList: React.PropTypes.array,
   selectedNavItem: React.PropTypes.string,
   handleClick: React.PropTypes.func };
 SideNavigationComponent.defaultProps = {
+  navItemList: ['Overview', 'Reports', 'Analytics', 'Export'],
   selectedNavItem: 'Overview',
   handleClick: function() { console.error('click handler in app.sideNavigation.component is missing') }
 };

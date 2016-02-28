@@ -8,7 +8,7 @@ class AppComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedNavItem: undefined
+      selectedNavItem: SideNavigation.defaultProps.selectedNavItem
     };
     // No Autobinding see https://facebook.github.io/react/docs/reusable-components.html#no-autobinding
     this.handleNavItemClick = this.handleNavItemClick.bind(this);
@@ -20,6 +20,28 @@ class AppComponent extends React.Component {
   }
 
   render() {
+
+    const navItemList = SideNavigation.defaultProps.navItemList;
+    var workspace;
+    switch (this.state.selectedNavItem) {
+      case navItemList[0]:
+        workspace = <DashboardComponent />;
+        break;
+      case navItemList[1]:
+        workspace = <DashboardComponent />;
+        break;
+      case navItemList[2]:
+        workspace = <DashboardComponent />;
+        break;
+      case navItemList[3]:
+        workspace = <DashboardComponent />;
+        break;
+      default:
+        //Statements executed when none of the values match the value of the expression
+        workspace = <DashboardComponent />;
+        break;
+    }
+
     return (
       <div className="row">
 
@@ -28,7 +50,7 @@ class AppComponent extends React.Component {
           handleClick={this.handleNavItemClick}
         />
 
-        <DashboardComponent />
+        {workspace}
 
       </div>
     );
