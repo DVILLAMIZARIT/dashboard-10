@@ -2,6 +2,7 @@ import React from 'react';
 
 import SideNavigation from './app.sideNavigation.component.js'
 import DashboardComponent from './workspaces/dashboard/dashboard.component';
+import ReportsComponent from './workspaces/reports/reports.component';
 
 class AppComponent extends React.Component {
 
@@ -28,7 +29,7 @@ class AppComponent extends React.Component {
         workspace = <DashboardComponent />;
         break;
       case navItemList[1]:
-        workspace = <DashboardComponent />;
+        workspace = <ReportsComponent />;
         break;
       case navItemList[2]:
         workspace = <DashboardComponent />;
