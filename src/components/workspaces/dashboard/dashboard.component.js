@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Customers from '../app/customers';
+import Customers from '../../../app/customers';
 
 import TopCompanies from './dashboard.topCompanies.component';
 import Table from './dashboard.table.component';

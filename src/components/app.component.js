@@ -1,7 +1,7 @@
 import React from 'react';
 
 import SideNavigation from './app.sideNavigation.component.js'
-import DashboardComponent from './dashboard.component';
+import DashboardComponent from './workspaces/dashboard/dashboard.component';
 
 class AppComponent extends React.Component {
 
