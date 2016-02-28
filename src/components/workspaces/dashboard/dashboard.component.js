@@ -9,21 +9,20 @@ class DashboardComponent extends React.Component {
 
   constructor(props) {
     super(props);
-    // this.customers = new Customers().load();
   }
 
   render() {
-    const customers = new Customers().load();
+    const customers = new Customers('https://mock');
 
     return (
       <div className="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
         <h1 className="page-header">Dashboard</h1>
 
-        <TopCompanies />
+        <TopCompanies topCompanies={customers.getTopComopanies()}/>
 
         <h2 className="sub-header">Section title</h2>
 
-        <Table customers={customers} />
+        <Table customers={customers.getCustomerObjectList()} />
 
       </div>
     );
